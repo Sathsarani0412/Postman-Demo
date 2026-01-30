@@ -25,29 +25,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://simple-books-api.click/books?type=fiction&limit=8",
-					"protocol": "https",
-					"host": [
-						"simple-books-api",
-						"click"
-					],
-					"path": [
-						"books"
-					],
-					"query": [
-						{
-							"key": "type",
-							"value": "fiction"
-						},
-						{
-							"key": "limit",
-							"value": "8"
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"Test1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
-				}
+					}
+				},
+				"url": "http://127.0.0.1:5000/login"
 			},
 			"response": []
 		}
